@@ -2,7 +2,7 @@
 import { Injectable, ErrorHandler, Injector } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { GlobalErrorLog } from 'src/app/shared/models/global_errorlog.model';
+import { GlobalErrorLog } from '../../shared/models/global_errorlog.model';
 
 @Injectable()
 export class GlobalErrorHandler extends ErrorHandler {

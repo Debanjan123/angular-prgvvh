@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { Constants } from 'src/app/shared/const/constant';
-import { CommonService } from 'src/app/shared/services/common.service';
-import { User, LoginReponse } from 'src/app/shared/models/login.model';
+import { Constants } from '../../../shared/const/constant';
+import { CommonService } from '../../../shared/services/common.service';
+import { User, LoginReponse } from '../../../shared/models/login.model';
 
 @Component({
     selector: 'app-header',

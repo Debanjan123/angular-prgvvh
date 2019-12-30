@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { CommonService } from './common.service';
-import { HttpClientHeader } from 'src/app/core/services/http-header.service';
+import { HttpClientHeader } from '../../core/services/http-header.service';
 import { LoginReponse } from '../models/login.model';
 
 @Injectable({
