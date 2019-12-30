@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#"><img src="../../../../assets/images/transformco.png" /></a>
+    <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+        <span class="navbar-toggler-icon"></span>
+        <i class="fa fa-bars text-muted" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown" ngbDropdown>
+                <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+                    <i class="fa fa-list"></i> LOB <b class="caret"></b>
+                </a>
+                <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a class="dropdown-item">
+                        LOB 1
+                    </a>
+                    <a class="dropdown-item">
+                        LOB 2
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown" ngbDropdown>
+                <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+                    <i class="fa fa-user"></i> {{userName}} <b class="caret"></b>
+                </a>
+                <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a class="dropdown-item" [routerLink]="['/login']" (click)="onLoggedout()">
+                        <i class="fa fa-fw fa-power-off"></i>Log Out
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

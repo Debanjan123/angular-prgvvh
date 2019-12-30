@@ -1,0 +1,12 @@
+[
+    {
+        "userId":"1234",
+        "password":"1234",
+        "isAuthorized": true
+    },
+    {
+        "userId":"test1234",
+        "password":"test1234",
+        "isAuthorized": false
+    }
+]

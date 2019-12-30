@@ -1,0 +1,142 @@
+<p-dialog header="Invoice Recap Processing" [(visible)]="display" [modal]="true" [responsive]="true"
+  [style]="{width: '1350px', height: '1400px'}" [maximizable]="true" [baseZIndex]="10000" [draggable]="false"
+  [positionTop]="35">
+  <!-- Search Form -->
+  <div>
+    <div class="row">
+      <div class="col-xl-6">
+        <!-- <p-header class="header">Search By</p-header> -->
+        <div class="form-inline">
+          <label class="col-sm-3">Contractor ID: </label>
+          <input class="form-control col-sm-9 invoiceRecapInput" placeholder="Enter text">
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">Vendor ID: </label>
+          <input class="form-control col-sm-9 invoiceRecapInput" placeholder="Enter text">
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">Contractor Name: </label>
+          <input class="form-control col-sm-9 invoiceRecapInput" placeholder="Enter text">
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">Address 1: </label>
+          <label class="col-sm-9">URB, BAIRDA CALLE 26 AZ-6 </label>
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">Address 2: </label>
+          <label class="col-sm-9"> </label>
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">City, State, Zip: </label>
+          <label class="col-sm-9">CAGUAS, PR 00726</label>
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">Country: </label>
+          <label class="col-sm-9">USA </label>
+        </div>
+        <div class="form-inline">
+          <label class="col-sm-3">Phone: </label>
+          <label class="col-sm-9">(787)235-4885 </label>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-xl-6 text-xs-center">
+            <div class="form-inline">
+              <label class="col-sm-6">Invoice Number: </label>
+              <input class="form-control col-sm-6 invoiceRecapInput" placeholder="Enter text">
+            </div>
+          </div>
+          <div class="col-xl-6 text-xs-center">
+            <div class="form-inline">
+              <label class="col-sm-6">Date Processed: </label>
+              <input class="form-control col-sm-6 invoiceRecapInput" placeholder="Enter text">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-1 text-right">
+          <div class="col-xl-6 text-xs-center">
+          </div>
+          <div class="col-xl-6 text-right">
+            <button class="btn btn-primary"> Search</button>
+          </div>
+        </div>
+        <div class="row mt-1 text-right">
+          <div class="col-xl-6 text-xs-center">
+          </div>
+          <div class="col-xl-6">
+            <button class="btn btn-primary">Clear</button>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-xl-6 text-xs-center">
+          </div>
+          <div class="col-xl-6 text-xs-center">
+            <div class="form-inline">
+              <label class="col-sm-6">Bigging Recap Total: </label>
+              <input class="form-control col-sm-6 invoiceRecapInput" placeholder="Enter text">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- Contractor invoice grid -->
+  <div>
+    <p-table [columns]="colInvoiceRecapProcessing" [value]="invoiceProcessingClone" [scrollable]="true" [lazy]="true"
+      (onLazyLoad)="loadInvoiceRecapProcessingLazy($event)" [paginator]="true" [rows]="10"
+      [totalRecords]="totalRecordInvoiceRecapProcessing" scrollHeight="100px">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of colInvoiceRecapProcessing" [pSortableColumn]="col.field">
+            {{col.header}}
+            <p-sortIcon [field]="col.field"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr style="height:30px;width: 50px;">
+          <td *ngFor="let col of colInvoiceRecapProcessing">
+            {{rowData[col.field]}}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <!-- Contractor invoice grid end-->
+  <div>
+    <div class="row">
+      <div class="col-xl-3 text-xs-center">
+        <fieldset class="form-group">
+          <label>Paid To Contractor</label>
+          <input class="form-control invoiceRecapInput" placeholder="Enter text">
+        </fieldset>
+      </div>
+      <div class="col-xl-3 text-xs-center">
+        <fieldset class="form-group">
+          <label>Ending Recap Total</label>
+          <input class="form-control invoiceRecapInput" placeholder="Enter text">
+        </fieldset>
+      </div>
+      <div class="col-xl-3 text-xs-center">
+        <fieldset class="form-group">
+          <label>Recap Margin%</label>
+          <input class="form-control invoiceRecapInput" placeholder="Enter text">
+        </fieldset>
+      </div>
+      <div class="col-xl-3 text-xs-center">
+        <fieldset class="form-group">
+          <label>Recap Difference</label>
+          <input class="form-control invoiceRecapInput" placeholder="Enter text">
+        </fieldset>
+      </div>
+    </div>
+    <div class="row text-left">
+        <button class="btn btn-primary ml-1">Delete Line Info</button>
+        <button class="btn btn-primary ml-1">Price Book Lookup</button>
+        <button class="btn btn-primary ml-1">Complete Recap</button>
+    </div>
+  </div>
+  <!-- Search from end -->
+</p-dialog>

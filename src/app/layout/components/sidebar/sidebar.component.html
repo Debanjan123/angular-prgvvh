@@ -1,0 +1,34 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+        <a class="list-group-item" (click)="openInvoiceRecapProcessing()">
+            <i class="fa fa-comments"></i>&nbsp;
+            <span>Invoice Recap Processing</span>
+        </a>
+        <a class="list-group-item" (click)="openSalesCheckInquiryModal()">
+            <i class="fa fa-file-o"></i>&nbsp;
+            <span>Sales Check Inquiry</span>
+        </a>
+        <a class="list-group-item">
+            <i class="fa fa-cog"></i>&nbsp;
+            <span>Salescheck Maintenance</span>
+        </a>
+        <a class="list-group-item">
+            <i class="fa fa-book"></i>&nbsp;
+            <span>Completed Recap Summary</span>
+        </a>
+        <a class="list-group-item">
+            <i class="fa fa-comments"></i>&nbsp;
+            <span>Administrative Functions</span>
+        </a>
+        <a class="list-group-item">
+            <i class="fa fa-file-o"></i>&nbsp;
+            <span>Contractor Inquiry and Updates</span>
+        </a>
+    </div>
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+        <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;
+        <span>Collapse Sidebar</span>
+    </div>
+</nav>
+<app-sales-check-inquiry *ngIf="isSalesCheckInquery"></app-sales-check-inquiry>
+<app-invoice-recap-processing *ngIf="isInvoiceRecapProcessing"></app-invoice-recap-processing>

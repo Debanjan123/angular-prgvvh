@@ -1,0 +1,15 @@
+.salesCheckDialog {
+    width: 1200px;
+    min-width: 200px;
+    top: 0px;
+    z-index: 1101;
+    left: 118px;
+    transform: none;
+    opacity: 1;
+}
+body .ui-dialog .ui-dialog-titlebar {
+    background: blue;
+}
+body {
+    background-color: #d3d3d3;
+}

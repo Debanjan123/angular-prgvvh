@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "salesCheck": "Test",
+            "CustomerName": "Justin Shaikh",
+            "phone": "9874563210",
+            "item": "A120",
+            "sellDate": "22/10/2019",
+            "contCost": "123",
+            "costAdj": "123",
+            "sellAdj": "123",
+            "otherAdj": "123",
+            "permit": "Test",
+            "delivery": "Test",
+            "totalSell": "Test",
+            "margin": "Test",
+            "app": "Yes",
+            "cmts": "Yes"
+        }
+    ]
+}
