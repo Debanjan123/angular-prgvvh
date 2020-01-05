@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CommonService } from 'src//shared/services/common.service';
+import { CommonService } from '//shared/services/common.service';
 
 @Injectable()
 export class HttpClientHeader {
